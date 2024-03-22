@@ -1,0 +1,13 @@
+package com.voya.food;
+
+import java.util.Arrays;
+import java.util.List;
+public class Italian implements iFoodMenu{
+
+	@Override
+	public List<String> ShowMenu() {
+		List<String> italian=Arrays.asList("Sizwan","kowmin");
+		return indian;
+	}
+
+}

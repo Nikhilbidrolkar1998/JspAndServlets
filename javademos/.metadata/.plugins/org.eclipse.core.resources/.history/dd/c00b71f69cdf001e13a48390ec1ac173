@@ -1,0 +1,51 @@
+package com.bookapp.testcases;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import com.bookapp.model.Book;
+import com.bookapp.service.OrderDetails;
+
+class OderDetailTestcase {
+	
+	@BeforeAll
+	static void setUpBeforeClass() throws Exception {
+	}
+
+	@AfterAll
+	static void tearDownAfterClass() throws Exception {
+	}
+	OrderDetails orderDetails;
+	List<Book> bookList;
+	Book book1,book2,book3,book4,book5,book6;
+	@BeforeEach
+	void setUp() throws Exception {
+		orderDetails=new OrderDetails();
+		book1=new Book("java","katly",1900,1);
+		book2=new Book("spring","katly",800,2);
+		book3=new Book("java","joe",800,3);
+		book4=new Book("leadership","katly",800,4);
+		book5=new Book("java","katly",1900,5);
+		book6=new Book("miracle","katly",1900,6);
+		bookList=Arrays.asList( book1,book2,book3,book4,book5,book6);
+	}
+
+	@AfterEach
+	void tearDown() throws Exception {
+		orderDetails =null;
+	}
+
+	@Test
+	void test() {
+		fail("Not yet implemented");
+	}
+
+}

@@ -1,0 +1,21 @@
+package com.voya.food;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Waiter {
+	@Autowired
+	@Qualifier("chinese")
+	iFoodMenu foodMenu;
+	
+	@Autowired
+	@Qualifier("indian")
+	iFoodMenu foodMenu1;
+	
+	@Autowired
+	@Qualifier("chinese")
+	iFoodMenu foodMenu2;
+	
+}

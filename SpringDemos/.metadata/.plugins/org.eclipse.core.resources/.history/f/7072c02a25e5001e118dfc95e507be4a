@@ -1,0 +1,9 @@
+package com.voya.demo;
+
+public class Vehicle {
+	private Integer vehicleId;
+	private String model;
+	private String brand;
+	private double price;
+	
+}

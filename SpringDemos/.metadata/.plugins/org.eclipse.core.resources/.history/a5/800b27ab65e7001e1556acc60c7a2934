@@ -1,0 +1,5 @@
+package com.greetapp.model;
+
+public class Insurence {
+
+}

@@ -1,0 +1,60 @@
+package com.insurenceapp.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.insurenceapp.exception.InsurenceNouFoundException;
+import com.insurenceapp.model.Insurence;
+import com.insurenceapp.service.IInsurenceService;
+
+@RestController
+@RequestMapping("/insurence-api/v1")
+public class InsurenceController {
+	@Autowired
+	IInsurenceService iInsurenceService;
+	
+	@GetMapping("/insurences")
+	void addInsurence(@RequestBody Insurence insurence) {
+		iInsurenceService.addInsurence(insurence);
+	}
+	
+	@PostMapping("/insurences")
+	void updateInsurence(@RequestBody Insurence insurence) {
+		iInsurenceService.updateInsurence(insurence.getInsuranceId(), insurence.getPremium());
+	}
+	
+	@DeleteMapping("/insurences/insurence-id/{insurenceId}")
+	void deleteInsurence(int insurenceId ) {
+		iInsurenceService.deleteInsurence(insurenceId);
+	}
+	
+	@GetMapping("/insurences")
+	List<Insurence> getAll(){
+		
+		return null;
+		
+	}
+	List<Insurence> getByBrand(String brand) throws InsurenceNouFoundException{
+		return null;
+		
+	}
+	List<Insurence> getByBrandAndType(String brand,String type) throws InsurenceNouFoundException{
+		return null;
+		
+	}
+	List<Insurence> getByTypeAndLesserPremium(String type,double premium) throws InsurenceNouFoundException{
+		return null;
+		
+	}
+	Insurence getById(int insurenceID) throws InsurenceNouFoundException{
+		return null;
+		
+	}
+}

@@ -1,0 +1,70 @@
+package com.voya.testcases;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+import com.voya.training.Calculator;
+
+class CalculatorTest {
+	Calculator calculator=null;
+
+	@BeforeAll
+	static void setUpBeforeClass() throws Exception {
+		System.out.println("called before all the testcases");
+	}
+
+	@AfterAll
+	static void cleanup() throws Exception {
+		System.out.println("called after all the testcases");
+	}
+
+	@BeforeEach
+	void setUp() throws Exception {
+		calculator=new Calculator();
+		System.out.println("called before each testcases");
+	}
+
+	@AfterEach
+	void tearDown() throws Exception {
+		calculator=null;
+		System.out.println("called after each testcases");
+	}
+
+	@Test
+	@DisplayName("testing sum Method")
+	void testSum() {
+		int actual= calculator.sum(10, 20);
+		assertEquals(30,actual,"output should be 30");
+	}
+	@Test
+	void testProduct() {
+		int actual=calculator.product(5, 10);
+		assertEquals(50, actual,"output should be 50");
+	}
+	@Test
+	void testGreeting() {
+		String actual=calculator.greetMessage("Nikhil");
+		assertEquals("Welcome Nikhil",actual,"not equal");
+	}
+	
+	@Test
+	void testShowCourses() {
+		List<String> expected=Arrays.asList("java", "css","Spring","Angular");
+		List<String> actual=Arrays.asList("css","Spring","java","Angular");
+		Collections.sort(expected);
+		assertEquals(expected,actual);
+	}
+	
+}

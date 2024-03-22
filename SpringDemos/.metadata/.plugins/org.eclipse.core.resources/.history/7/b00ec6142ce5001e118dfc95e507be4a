@@ -1,0 +1,16 @@
+package com.voya.food;
+
+import java.util.Arrays;
+@Component
+import java.uti
+
+import org.springframework.stereotype.Component;l.List;
+public class Italian implements iFoodMenu{
+
+	@Override
+	public List<String> ShowMenu() {
+		List<String> italian=Arrays.asList("Sizwan","kowmin");
+		return italian;
+	}
+
+}

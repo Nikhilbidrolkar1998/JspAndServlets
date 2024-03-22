@@ -1,0 +1,48 @@
+package com.voya.testcases.student;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+import com.voya.exception.InvalidNumberException;
+import com.voya.training.StudentDetails;
+
+class StudentTest {
+	StudentDetails studentDetails=null;
+	@BeforeAll
+	static void setUpBeforeClass() throws Exception {
+	}
+
+	@AfterAll
+	static void tearDownAfterClass() throws Exception {
+	}
+
+	@BeforeEach
+	void setUp() throws Exception {
+	}
+
+	@AfterEach
+	void tearDown() throws Exception {
+		studentDetails=null;
+	}
+
+	@Test
+	void testTotalMarks() {
+		assertEquals(220, studentDetails.totalMarks(90,80,50),"Expected marks are 220");
+	}
+	@Test
+	@DisplayName("testing marks negative")
+	void testNegativeMarks() {
+		assertThrows(InvalidNumberException.class,()->studentDetails.totalMarks(80,-50,70));
+	}
+	@Test
+	@DisplayName("testing marks less than 100")
+	void testGreaterMarks() {
+		assertThrows(InvalidNumberException.class,()->studentDetails.totalMarks(180,50,70));
+	}
+}

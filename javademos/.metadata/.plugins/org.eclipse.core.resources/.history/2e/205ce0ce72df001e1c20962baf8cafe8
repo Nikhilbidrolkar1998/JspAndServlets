@@ -1,0 +1,7 @@
+package com.voya.testcases;
+
+public class StudentDetails {
+	public int totalMarks(int marks1,int marks,int marks3) {
+		return 0;
+	}
+}

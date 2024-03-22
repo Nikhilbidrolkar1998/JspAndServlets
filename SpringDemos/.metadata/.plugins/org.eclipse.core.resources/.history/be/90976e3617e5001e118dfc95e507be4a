@@ -1,0 +1,8 @@
+package com.spring.autowiring;
+
+public class Snippet {
+	public static void main(String[] args) {
+		Rectangle
+	}
+}
+

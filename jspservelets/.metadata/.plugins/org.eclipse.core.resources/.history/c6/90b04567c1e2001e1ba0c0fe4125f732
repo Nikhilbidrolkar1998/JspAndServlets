@@ -1,0 +1,24 @@
+<%@page import="com.doctorapp.model.Doctor"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="updateServlet">
+	Doctor Name<input type="text" name="doctorname" ><br>
+	Speciality 
+	fees<input type="number" name="fees" value=${ } ><br>
+	Rating<input type="number" name="rating"><br>
+	Experience<input type="number" name="experience"><br>
+	<input type="submit" value="submit">
+	</form>
+	Update fees<input type="number" name="fees">
+	<input type="submit" value="submit">
+	</form>
+	
+</body>
+</html>

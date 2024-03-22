@@ -1,0 +1,42 @@
+package com.insurenceapp.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.insurenceapp.exception.InsurenceNouFoundException;
+import com.insurenceapp.model.Insurence;
+import com.insurenceapp.service.IInsurenceService;
+
+@RestController
+public class InsurenceController {
+	@Autowired
+	IInsurenceService iInsurenceService;
+	
+	void addInsurence(Insurence insurence) {
+		
+	}
+	void updateInsurence(int insurenceId,double premium) {
+		
+	}
+	void deleteInsurence(int insurenceId ) {
+		
+	}
+	
+	List<Insurence> getAll(){
+		
+	}
+	List<Insurence> getByBrand(String brand) throws InsurenceNouFoundException{
+		
+	}
+	List<Insurence> getByBrandAndType(String brand,String type) throws InsurenceNouFoundException{
+		
+	}
+	List<Insurence> getByTypeAndLesserPremium(String type,double premium) throws InsurenceNouFoundException{
+		
+	}
+	Insurence getById(int insurenceID) throws InsurenceNouFoundException{
+		
+	}
+}

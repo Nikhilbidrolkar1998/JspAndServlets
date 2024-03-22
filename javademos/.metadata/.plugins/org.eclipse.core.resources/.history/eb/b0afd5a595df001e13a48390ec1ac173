@@ -1,0 +1,9 @@
+package com.bookapp.exception;
+
+public class BookNotFoundException {
+
+	public BookNotFoundException() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

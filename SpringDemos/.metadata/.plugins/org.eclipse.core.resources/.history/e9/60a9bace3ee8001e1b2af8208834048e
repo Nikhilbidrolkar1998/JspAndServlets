@@ -1,0 +1,11 @@
+package com.insurenceapp.repository;
+
+import org.apache.ibatis.annotations.Insert;
+
+import com.insurenceapp.model.AppUser;
+
+public interface IAppUserRepository {
+	
+	void addUser(AppUser user);
+	AppUser findByUser(String username);
+}

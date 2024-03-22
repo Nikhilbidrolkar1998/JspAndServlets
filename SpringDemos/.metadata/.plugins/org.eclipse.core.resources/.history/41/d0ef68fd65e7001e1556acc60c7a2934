@@ -1,0 +1,5 @@
+package com.greetapp.service;
+
+public interface IInsurenceService {
+
+}

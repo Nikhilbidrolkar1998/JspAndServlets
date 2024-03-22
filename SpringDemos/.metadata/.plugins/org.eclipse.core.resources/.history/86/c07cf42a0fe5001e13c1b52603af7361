@@ -1,0 +1,29 @@
+package com.spring.constructor;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Student {
+	private String StudName;
+	private String department;
+	public String getStudName() {
+		return StudName;
+	}
+	@Value("Rajesh")
+	public void setStudName(String studName) {
+		StudName = studName;
+	}
+	public String getDepartment() {
+		return department;
+	}
+	@Value("CS")
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+	@Override
+	public String toString() {
+		return "Student [StudName=" + StudName + ", department=" + department + "]";
+	}
+	
+}

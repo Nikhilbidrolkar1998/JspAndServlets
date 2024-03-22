@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 packages to &apos;spring-insurenceapp-test/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;spring-greetapp-rest&apos;&#x0D;&#x0A;- Destination element: &apos;spring-insurenceapp-test/src/main/java&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     spring-greetapp-rest/src/main/java/com.greetapp.service&#x0D;&#x0A;     spring-greetapp-rest/src/main/java/com.greetapp.model" description="Copy packages" destination="=spring-insurenceapp-test/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.greetapp.service" element2="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.greetapp.model" flags="589830" fragments="2" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1711013674670" version="1.0"/>
+</session>

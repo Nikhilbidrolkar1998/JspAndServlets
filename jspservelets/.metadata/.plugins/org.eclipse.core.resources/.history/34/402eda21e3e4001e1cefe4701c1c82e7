@@ -1,0 +1,48 @@
+<%@page import="org.apache.tomcat.util.http.fileupload.RequestContext"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1" errorPage="errorHandler.jsp"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1> WelCome to JS</h1>
+	<%String name="Nikhil";%>
+	<%="Welcome "+name %>
+	<%int x=10,y=20;%>
+	<%= "Sum "+(x+y) %>
+	<%! int counter=1; %>
+	<%= ++counter %>
+	<% int a=10/0; %>
+	<%! String greet(){
+		return "Welcome Back";
+	}
+	%>
+	
+	<%
+		pageContext.setAttribute("message", "Welcome");
+		RequestContext.setAttribute("message","good day in request");
+		session.setAttribute("message", "Great day in session");
+		application.setAttribute("messsage","Fin day bin application");
+	%>
+	<h2>
+		using scripting
+	</h2>
+	<%
+		String msg1=(String)request.getAttribute("message");
+		String msg2=(String)session.getAttribute("mesasge");
+		String msg3=(String)application.getAttribute("mesasge");
+	%>
+	<%=msg1 %>
+	<%=msg2 %>
+	<%=msg3 %>
+	
+	<h2>Using EL</h2>
+	${message }
+	${request.message}
+	${session.message }
+	${application.message }
+</body>
+</html>

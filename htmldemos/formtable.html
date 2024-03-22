@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <form action="tabledemo.html" method="get">
+            <tr>
+                <th>Enter Name</th>
+                <td><input type="text" name="username" placeholder="Enter Name"></td>
+            </tr>
+            <tr>
+                <th>Enter Password</th>
+                <td><input type="password" name="password"><br></td>
+            </tr>
+            <tr>
+                <th> Gender</th>
+                <td><input type="radio" name="gender" value="male" checked>Male
+                    <input type="radio" name="gender" value="female" checked>Female</td>
+            </tr>
+            <tr>
+                <th>Select Course</th>
+                <td>
+                    <select name="course" multiple size="3">
+                    <option value="Java">Java</option>
+                    <option value="Spring">Spring</option>
+                    <option value="Angular">Angular</option>
+                    <option value="Node">Node</option>
+                </select>
+                </td>
+            </tr>
+            
+            <br>
+            
+            <select name="course" multiple size="3">
+                <option value="Java">Java</option>
+                <option value="Spring">Spring</option>
+                <option value="Angular">Angular</option>
+                <option value="Node">Node</option>
+            </select>
+            <br>
+            Hobbies
+            <input type="checkbox" name="hobby" value="dance">Dance
+            <input type="checkbox" name="hobby" value="music">Music
+            <input type="checkbox" name="hobby" value="sports">Sports
+            <input type="checkbox" name="hobby" value="reading">Reading
+            <br>
+            Comments <textarea rows="10" columns="10">Share your thoughts</textarea><br>
+            <input type="submit" value="Enter Detauls">
+        </form>
+    </table>
+</body>
+</html>

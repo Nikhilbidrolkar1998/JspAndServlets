@@ -1,0 +1,13 @@
+package com.insurenceapp.repository;
+
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Mapper;
+
+import com.insurenceapp.model.AppUser;
+
+@Mapper
+public interface IAppUserRepository {
+	@Insert("insert into appuser values(#{userId},#{username},#{password},#{email})")
+	void addUser(AppUser user);
+	AppUser findByUser(String username);
+}

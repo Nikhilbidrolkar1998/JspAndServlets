@@ -1,0 +1,5 @@
+package com.insurenceapp.service;
+
+public class IAppUserRepository {
+
+}

@@ -1,0 +1,10 @@
+p{
+    background-color: aquamarine;
+}
+div> p{
+    color: rgb(59, 82, 145);
+}
+h1{
+    text-transform: uppercase;
+    background-color: chocolate;
+}

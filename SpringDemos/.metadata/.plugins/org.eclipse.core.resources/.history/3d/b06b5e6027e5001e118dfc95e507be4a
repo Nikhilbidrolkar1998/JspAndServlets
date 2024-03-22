@@ -1,0 +1,11 @@
+package com.voya.auto;
+
+public class Keyboard implements IInstrument{
+
+	@Override
+	public void play(String song) {
+		System.out.println("Guiter Song ");
+		
+	}
+
+}

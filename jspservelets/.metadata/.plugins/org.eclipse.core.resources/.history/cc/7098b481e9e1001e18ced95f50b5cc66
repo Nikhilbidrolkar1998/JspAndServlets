@@ -1,0 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="register">
+        Enter Name<input type="text" name="employeename"></br>
+        Enter Id<input type="text" name="employeeid"></br>
+        Enter Salary<input type="number" name="salary"></br>
+        Enter City<input type="tel" name="city"></br>
+     </form>
+</body>
+</html>

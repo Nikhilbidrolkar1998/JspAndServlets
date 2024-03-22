@@ -1,0 +1,21 @@
+package com.insurenceapp.service;
+
+import java.util.List;
+
+import com.insurenceapp.model.Insurence;
+
+public class InsurenceServiceImpl implements IInsurenceService{
+
+	@Override
+	public List<Insurence> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Insurence getById(int insurenceID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

@@ -1,0 +1,16 @@
+package com.oops.basics;
+
+public class Student {
+	String department;
+	String studentName;
+	String usn;
+	String city;
+	
+	public static void main(String[] args) {
+		Student student=new Student();
+		student.department="Infra";
+		student.studentName="Nikhil";
+		student.usn="2VX20Mc043";
+		student.city="Dharwad";
+	}
+}

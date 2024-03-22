@@ -1,0 +1,5 @@
+package com.doctorapp.exception;
+
+public class IdNotFoundException {
+
+}

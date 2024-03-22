@@ -1,0 +1,9 @@
+package com.spring.autowiring;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Shapefactory {
+	Shape shape;
+	
+}

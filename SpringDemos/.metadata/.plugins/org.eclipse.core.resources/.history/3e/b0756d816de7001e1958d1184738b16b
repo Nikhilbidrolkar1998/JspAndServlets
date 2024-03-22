@@ -1,0 +1,28 @@
+package com.insurenceapp.repository;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Delete;
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Mapper;
+
+import com.insurenceapp.exception.InsurenceNouFoundException;
+import com.insurenceapp.model.Insurence;
+
+@Mapper
+public interface IInserenceRepository {
+	@Insert("insert into insurence(insurance_id,policy_name,brand,type,duration,premium) values(#{insuranceId},#{policyName},#{brand},#{type},#{duration},#{premium})")
+	void addInsurence(Insurence insurence);
+	
+	@Insert("update insurence set premium=#{premium} where insurance_id=#{insuranceId}")
+	void updateInsurence(int insurenceId,double premium);
+	
+	@Delete("delete from insurence where insurance_id=#{insuranceId}")
+	void deleteInsurence(int insurenceId );
+	
+	List<Insurence> getAll();
+	List<Insurence> getByBrand(String brand) throws InsurenceNouFoundException;
+	List<Insurence> getByBrandAndType(String brand,String type) throws InsurenceNouFoundException;
+	List<Insurence> getByTypeAndLesserPremium(String type,double premium) throws InsurenceNouFoundException;
+	Insurence getById(int insurenceID) throws InsurenceNouFoundException;
+}

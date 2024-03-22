@@ -1,0 +1,66 @@
+package com.insurenceapp.service;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.insurenceapp.model.Insurence;
+import com.insurenceapp.repository.IInserenceRepository;
+
+@Service
+public class InsurenceServiceImpl implements IInsurenceService{
+	
+	@Autowired
+	IInserenceRepository inserenceRepository;
+	@Override
+	public void addInsurence(Insurence insurence) {
+		inserenceRepository.addInsurence(insurence);
+		
+	}
+
+	@Override
+	public void updateInsurence(int insurenceId, double premium) {
+		
+		
+	}
+
+	@Override
+	public void deleteInsurence(int insurenceId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Insurence> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Insurence> getByBrand(String brand) throws InsurenceNouFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Insurence> getByBrandAndType(String brand, String type) throws InsurenceNouFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Insurence> getByTypeAndLesserPremium(String type, double premium) throws InsurenceNouFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Insurence getById(int insurenceID) throws InsurenceNouFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+}

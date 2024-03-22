@@ -1,0 +1,5 @@
+package com.insurenceapp.model;
+
+public class ApiErrors {
+
+}
